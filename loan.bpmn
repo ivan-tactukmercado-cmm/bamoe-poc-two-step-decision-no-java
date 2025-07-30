@@ -12,38 +12,57 @@
     <businessRuleTask id="_CFD2E970-5F4E-4947-8367-5225BED1803B" name="Have good credit?" implementation="http://www.jboss.org/drools/dmn">
       <incoming>_C4D8E13F-8362-42A5-9B33-B19727C04BDB</incoming>
       <outgoing>_218F6628-9607-47DC-928D-2CF9DDDDEBFC</outgoing>
-      <ioSpecification id="_4CF65DF3-AF80-47BB-9628-07EC9D6F35A7">
-        <dataInput id="_BDE3189D-6942-45EE-9B54-3F24C428FBD9" name="model" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
-        <dataInput id="_4FCDFF8F-BCE1-4C4B-AE27-032414D7DF11" name="fileName" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
-        <dataInput id="_D59BD767-70F6-4D25-A12A-CFB1CC59B96D" name="namespace" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
-        <inputSet id="_51A15F66-3B0A-43E7-9646-84C5C71F35BA">
-          <dataInputRefs>_BDE3189D-6942-45EE-9B54-3F24C428FBD9</dataInputRefs>
-          <dataInputRefs>_4FCDFF8F-BCE1-4C4B-AE27-032414D7DF11</dataInputRefs>
-          <dataInputRefs>_D59BD767-70F6-4D25-A12A-CFB1CC59B96D</dataInputRefs>
+      <ioSpecification id="_C75289B2-A45D-401F-89A4-02294AD88C68">
+        <dataInput id="_B17F587C-FCA0-44D4-8C5F-CC010DAEE2A4" name="model" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
+        <dataInput id="_31CC3C14-7A71-4BFB-97D3-925D941AA3B6" name="fileName" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
+        <dataInput id="_8F58997D-B958-4220-894D-7770557090C6" name="namespace" drools:dtype="String" itemSubjectRef="_451A7CF9-CE2E-4E06-A3B0-2A0459D7E47D" />
+        <dataInput id="_AFE61BF7-F1B0-44E9-AF1F-A5A08F4DE816" name="Experian" drools:dtype="Integer" itemSubjectRef="_53826C4E-091F-4020-9391-4443D487C5AE" />
+        <dataInput id="_0D8D73AE-D808-4B58-957D-F072C54F70BC" name="Equfax" drools:dtype="Integer" itemSubjectRef="_53826C4E-091F-4020-9391-4443D487C5AE" />
+        <dataOutput name="Approved" id="_A275EEF0-FCFE-4073-B7DD-2FB3FC68A75D" drools:dtype="Boolean" itemSubjectRef="_EBF144A7-FCBF-49EE-A6EC-B179EB9679BF" />
+        <inputSet id="_396E34D2-23DC-4C95-87C5-CCAA1E215FE3">
+          <dataInputRefs>_B17F587C-FCA0-44D4-8C5F-CC010DAEE2A4</dataInputRefs>
+          <dataInputRefs>_31CC3C14-7A71-4BFB-97D3-925D941AA3B6</dataInputRefs>
+          <dataInputRefs>_8F58997D-B958-4220-894D-7770557090C6</dataInputRefs>
+          <dataInputRefs>_AFE61BF7-F1B0-44E9-AF1F-A5A08F4DE816</dataInputRefs>
+          <dataInputRefs>_0D8D73AE-D808-4B58-957D-F072C54F70BC</dataInputRefs>
         </inputSet>
-        <outputSet id="_04F5A9BA-C610-48C8-828E-CC67D128E2B3" />
+        <outputSet id="_8B74F532-1B3D-4AB4-88B9-10DC28ED4A9C">
+          <dataOutputRefs>_A275EEF0-FCFE-4073-B7DD-2FB3FC68A75D</dataOutputRefs>
+        </outputSet>
       </ioSpecification>
-      <dataInputAssociation id="_083DDC33-D99F-4178-B656-740C21428BE2">
-        <targetRef>_BDE3189D-6942-45EE-9B54-3F24C428FBD9</targetRef>
-        <assignment id="_BC1C3B2C-533B-435E-83E1-7361700FEF52">
-          <from id="_A2ECD5E6-10E8-4F44-96F8-881E43695763" xsi:type="tFormalExpression">DMN_404C597C-0053-4AC4-BD3D-D1B29072495E</from>
-          <to id="_EA90D737-C9B4-4162-8827-4A89E66BC694">_BDE3189D-6942-45EE-9B54-3F24C428FBD9</to>
+      <dataInputAssociation id="_7892A159-C103-49EF-95F5-4FC15BFE8945">
+        <targetRef>_B17F587C-FCA0-44D4-8C5F-CC010DAEE2A4</targetRef>
+        <assignment id="_8C63377D-9789-4655-A501-1ADD2B1A9897">
+          <from id="_ED62487F-628F-4461-8770-162C45981FD7" xsi:type="tFormalExpression">DMN_404C597C-0053-4AC4-BD3D-D1B29072495E</from>
+          <to id="_486C926D-3587-4A7D-BCC0-0A43018269DC">_B17F587C-FCA0-44D4-8C5F-CC010DAEE2A4</to>
         </assignment>
       </dataInputAssociation>
-      <dataInputAssociation id="_30982FFF-672E-42BC-A4E0-8C75CB611ACD">
-        <targetRef>_4FCDFF8F-BCE1-4C4B-AE27-032414D7DF11</targetRef>
-        <assignment id="_783EC660-E653-4B8E-BB88-9A6221342763">
-          <from id="_AC89A39E-BCC3-49E2-873A-6998637673CD" xsi:type="tFormalExpression">CreditEvaluator.dmn</from>
-          <to id="_3061BB9A-A5CA-4A65-B46E-8228A3EA76D9">_4FCDFF8F-BCE1-4C4B-AE27-032414D7DF11</to>
+      <dataInputAssociation id="_81ACEC21-6575-45A4-A30D-A470231E612F">
+        <targetRef>_31CC3C14-7A71-4BFB-97D3-925D941AA3B6</targetRef>
+        <assignment id="_9C26C6BB-100C-4F51-947B-65DEA6AABDD0">
+          <from id="_143AE7AF-47EA-47A9-A4C0-29BCEA313121" xsi:type="tFormalExpression">CreditEvaluator.dmn</from>
+          <to id="_ADF4783D-B585-4526-B25D-0126636DFCB3">_31CC3C14-7A71-4BFB-97D3-925D941AA3B6</to>
         </assignment>
       </dataInputAssociation>
-      <dataInputAssociation id="_6215598C-A824-4923-90D0-2BDDFD7E07A4">
-        <targetRef>_D59BD767-70F6-4D25-A12A-CFB1CC59B96D</targetRef>
-        <assignment id="_CB407F10-9588-4C42-A46F-FF1B8E013C93">
-          <from id="_364D985C-C68D-48FC-B78E-5D8F0E991CD3" xsi:type="tFormalExpression">https://kie.org/dmn/_1436A937-AE9A-4F01-98B4-334645FC4538</from>
-          <to id="_70D19CEA-7CB0-46CE-860F-AF3DD7C8E415">_D59BD767-70F6-4D25-A12A-CFB1CC59B96D</to>
+      <dataInputAssociation id="_8E9DDDC6-2D51-472A-8424-752214DD469B">
+        <targetRef>_8F58997D-B958-4220-894D-7770557090C6</targetRef>
+        <assignment id="_E45BF7AD-D047-45AD-BAF2-7C3B58E8BF4F">
+          <from id="_33124F8F-C804-4D8B-8C48-4E939946AE00" xsi:type="tFormalExpression">https://kie.org/dmn/_1436A937-AE9A-4F01-98B4-334645FC4538</from>
+          <to id="_F85D3019-9789-48B8-BA76-ABBD5CA7E1A6">_8F58997D-B958-4220-894D-7770557090C6</to>
         </assignment>
       </dataInputAssociation>
+      <dataInputAssociation id="_1D366EE3-386A-42B9-8BAB-ED27D526697F">
+        <sourceRef>_4EF357C6-D42E-4E64-8C37-4396FABCC1B7</sourceRef>
+        <targetRef>_AFE61BF7-F1B0-44E9-AF1F-A5A08F4DE816</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation id="_79DC0D58-082E-472D-9A11-E05124A21409">
+        <sourceRef>_4EF357C6-D42E-4E64-8C37-4396FABCC1B7</sourceRef>
+        <targetRef>_0D8D73AE-D808-4B58-957D-F072C54F70BC</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation id="_F0D5CB79-72EE-4732-8784-66DCD16CA410">
+        <sourceRef>_A275EEF0-FCFE-4073-B7DD-2FB3FC68A75D</sourceRef>
+        <targetRef>_98D7147B-6A70-40DC-8E42-EEDCA16944B2</targetRef>
+      </dataOutputAssociation>
     </businessRuleTask>
     <businessRuleTask id="_4DBC835B-9A54-4BEB-9882-8107E30855C2" name="Interest Rate" implementation="http://www.jboss.org/drools/dmn">
       <incoming>_4AED0AAC-643D-4DC5-B0A3-0DBC0A474FA2</incoming>
@@ -58,8 +77,7 @@
           <dataInputRefs>_598028EA-A8C4-4E92-932D-96DC1D7823DD</dataInputRefs>
           <dataInputRefs>_7506AFEB-CBFC-48DF-BDE8-71753BA50F1B</dataInputRefs>
         </inputSet>
-        <outputSet id="_14B89E36-95D7-4F01-B2CE-CF9AC6C2DD21">
-        </outputSet>
+        <outputSet id="_14B89E36-95D7-4F01-B2CE-CF9AC6C2DD21" />
       </ioSpecification>
       <dataInputAssociation id="_5512F997-1CDB-4071-A71A-0DAF230E5BF7">
         <targetRef>_7FB9238C-2B62-4D10-BC5D-A871502270D5</targetRef>
@@ -108,8 +126,12 @@
     </scriptTask>
     <sequenceFlow id="_C4D8E13F-8362-42A5-9B33-B19727C04BDB" sourceRef="_67008FF2-A5C1-415F-89FC-81AECFA0BAD6" targetRef="_CFD2E970-5F4E-4947-8367-5225BED1803B" />
     <sequenceFlow id="_218F6628-9607-47DC-928D-2CF9DDDDEBFC" sourceRef="_CFD2E970-5F4E-4947-8367-5225BED1803B" targetRef="_EAC0607C-63F9-4201-B919-3B371F93A7D6" />
-    <sequenceFlow id="_18025039-CA8F-4150-8442-44933021CB6E" sourceRef="_EAC0607C-63F9-4201-B919-3B371F93A7D6" targetRef="_C51C7BD0-D4FA-445D-B05F-7DD9AAF880BA" />
-    <sequenceFlow id="_4AED0AAC-643D-4DC5-B0A3-0DBC0A474FA2" sourceRef="_EAC0607C-63F9-4201-B919-3B371F93A7D6" targetRef="_4DBC835B-9A54-4BEB-9882-8107E30855C2" />
+    <sequenceFlow id="_18025039-CA8F-4150-8442-44933021CB6E" sourceRef="_EAC0607C-63F9-4201-B919-3B371F93A7D6" targetRef="_C51C7BD0-D4FA-445D-B05F-7DD9AAF880BA">
+      <conditionExpression id="_BA942A9B-AA5A-47AA-BFA1-8CE385402384">approved</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_4AED0AAC-643D-4DC5-B0A3-0DBC0A474FA2" sourceRef="_EAC0607C-63F9-4201-B919-3B371F93A7D6" targetRef="_4DBC835B-9A54-4BEB-9882-8107E30855C2">
+      <conditionExpression id="_64D8393E-5D27-4E12-A62A-1615A65C5743">approved</conditionExpression>
+    </sequenceFlow>
     <sequenceFlow id="_2C5B3AED-FBD5-4B4B-82BB-B6C85E402CDF" sourceRef="_C51C7BD0-D4FA-445D-B05F-7DD9AAF880BA" targetRef="_1DA2D6A9-DA67-464F-BC47-A04941A831BC" />
     <sequenceFlow id="_EEF2091F-964B-482D-AB12-4F7090ABE71F" sourceRef="_4DBC835B-9A54-4BEB-9882-8107E30855C2" targetRef="_C7636DA4-5E2A-46A0-B511-0813A5EF8626" />
     <sequenceFlow id="_B63E3653-AC90-4831-BF52-BD154D2907F9" sourceRef="_C7636DA4-5E2A-46A0-B511-0813A5EF8626" targetRef="_089DEB6D-18B7-4D34-BB8E-3941EDE1EDE5" />
